@@ -1,0 +1,33 @@
+{
+  "name": "Angular_Hello_World",
+  "homepage": "",
+  "author": "Nelson>",
+  "description": "Base framework for Cloud Insight UI Development.",
+  "bugs": {
+    "url": "https://algithub.pd.alertlogic.net/defender/al_ui_template/issues"
+  },
+  "scripts": {
+    
+    "start": "ws -p 8888 -d src/main/"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "0.0.1",
+  "license": "Free",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "cssmin": "^0.4.3",
+    "requirejs": "^2.1.22"
+  },
+  "folders": {
+    "build": "target/",
+    "builde2e": "targete2e/",
+    "wwwRoot": "src/main/",
+    "jsSource": "src/main/",
+    "testRoot": "src/test/"
+  },
+  "devDependencies": {}
+}
