@@ -40,7 +40,7 @@ define([ 'angular',
 
         
 
-
+        app.service( "TMDBAPIService", TMDBAPIService);
         app.controller( "HomeController", HomeController );
         
 

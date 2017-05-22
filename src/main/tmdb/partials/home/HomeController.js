@@ -22,19 +22,8 @@ define( [ 'angular',
 
         var HomeController = function($scope ) {
 
-            $scope.view   = {
-                movies: [],
-            };
-
-            // var api = TMDBAPIService.Discover();
-            // api.discover.movies().then(function ( response ) {
-            //     $scope.view.movies = response.data;
-            // });
-            
+            $scope.hola_nelson = "Hello World  Nelson";
         };
-
-        HomeController.$inject = [ '$scope' ];
-
         return HomeController;
     }
 );
