@@ -20,15 +20,13 @@
 
 define([ 'angular',
          'config/config',
-         'ngRoute', 'ngResource', 'LocalStorageModule',
-         'tmdb/services/TMDBAPIService',
-         'tmdb/partials/home/HomeController',
-         'tmdb/partials/remoteImageLoader/RemoteImageLoader'],
-    function( angular, config, $resource, $location, LocalStorageModule,TMDBAPIService, HomeController,RemoteImageLoader ) {
+         'ngRoute', 
+         'tmdb/partials/home/HomeController'],
+    function( angular, config, $location, HomeController ) {
     	"use strict";
 
         /** @constructs app */
-        var angularModules = config.standardAngularModules.concat( 'LocalStorageModule' );
+        var angularModules = config.standardAngularModules
 
         /** @constructs app */
         var app = angular.module("app", angularModules );
@@ -42,9 +40,7 @@ define([ 'angular',
 
         
 
-        app.service( "TMDBAPIService", TMDBAPIService);
         app.controller( "HomeController", HomeController );
-        app.controller( "RemoteImageLoader", RemoteImageLoader );
         
 
         app.config(['$routeProvider', function($routeProvider) {
