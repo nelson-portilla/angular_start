@@ -1,4 +1,11 @@
-<h1>
 {{hola_nelson}}
-</h1>
-<!-- <popular-movies ng-model="view.movies.results" /> -->
+<br>
+	<b>RESULTADO SERVICIO:</b>
+<br>
+<ol>
+	<li ng-repeat='x in view.movies.results'>
+		{{x.title}}<br>
+	<li>
+<ol>
+<br>
+<popular-movies ng-model="view.movies.results" />
