@@ -23,8 +23,11 @@ define([ 'angular',
          'ngRoute', 'ngResource', 'LocalStorageModule',
          'tmdb/services/TMDBAPIService',
          'tmdb/partials/home/HomeController',
-         'tmdb/partials/remoteImageLoader/RemoteImageLoader'],
-    function( angular, config, $resource, $location, LocalStorageModule,TMDBAPIService, HomeController,RemoteImageLoader ) {
+         'tmdb/partials/remoteImageLoader/RemoteImageLoader',
+         'tmdb/directives/movieTile',
+         ],
+    function( angular, config, $resource, $location, LocalStorageModule,TMDBAPIService, 
+        HomeController,RemoteImageLoader, movieTile ) {
     	"use strict";
 
         /** @constructs app */
@@ -45,6 +48,7 @@ define([ 'angular',
         app.service( "TMDBAPIService", TMDBAPIService);
         app.controller( "HomeController", HomeController );
         app.controller( "RemoteImageLoader", RemoteImageLoader );
+        app.directive( "movieTile", movieTile );
         
 
         app.config(['$routeProvider', function($routeProvider) {

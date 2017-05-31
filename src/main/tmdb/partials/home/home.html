@@ -2,10 +2,8 @@
 <br>
 	<b>RESULTADO SERVICIO:</b>
 <br>
-<ol>
-	<li ng-repeat='x in view.movies.results'>
-		{{x.title}}<br>
-	<li>
-<ol>
+	<div ng-repeat='movie in view.movies.results'>
+		<movie-tile ng-model="movie" />
+	</div>
 <br>
-<popular-movies ng-model="view.movies.results" />
+
