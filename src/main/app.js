@@ -25,9 +25,10 @@ define([ 'angular',
          'tmdb/partials/home/HomeController',
          'tmdb/partials/remoteImageLoader/RemoteImageLoader',
          'tmdb/directives/movieTile',
+         'tmdb/directives/scoreMovie',
          ],
     function( angular, config, $resource, $location, LocalStorageModule,TMDBAPIService, 
-        HomeController,RemoteImageLoader, movieTile ) {
+        HomeController,RemoteImageLoader, movieTile, scoreMovie ) {
     	"use strict";
 
         /** @constructs app */
@@ -49,6 +50,7 @@ define([ 'angular',
         app.controller( "HomeController", HomeController );
         app.controller( "RemoteImageLoader", RemoteImageLoader );
         app.directive( "movieTile", movieTile );
+        app.directive( "scoreMovie", scoreMovie );
         
 
         app.config(['$routeProvider', function($routeProvider) {

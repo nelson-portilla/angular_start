@@ -28,7 +28,7 @@ define( [ 'angular',
             };
 
             $scope.hola_nelson = "Hello World  Nelson";
-    
+            console.log($scope.view);
 
         var api = TMDBAPIService.Discover();
             api.discover.movies().then(function ( response ) {
