@@ -1,10 +1,18 @@
 <div style="float: left; margin: 10px;">
-	<a href="#/movie/{{ movie.id }}"
+	<!-- <a href="#/movie/{{ movie.id }}"
 		title="{{ movie.title }}"
 		ng-if="movie.poster_path">
 		<div>
 	    	<img src="{{view.images}}{{ movie.poster_path }}" width="150" />
 	    </div>
 	    <div>{{ movie.vote_average }}</div>
-	</a>
+	</a> -->
+
+		<div>
+	    	<img src="{{view.images}}{{ movie.poster_path }}" width="150" />
+	    </div>
+	    <div>{{movie.vote_average }}
+	    <score-movie prefix="score" val="movie.vote_average" action="clickOne()" ng-if="even"/>
+		<score-movie prefix="SCORE" val="movie.vote_average" action="clickTwo()" ng-if="!even"/>
+		</div>
 </div>

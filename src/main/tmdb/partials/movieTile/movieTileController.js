@@ -10,6 +10,14 @@ define( [ 'angular',
             $scope.view   = {
                 images: config.apiImg
             };
+            
+            $scope.clickOne = function(){
+                console.log("en el click one");
+            };
+
+            $scope.clickTwo = function(){
+                console.log("en el click two");
+            };
         };
 
         MovieTileController.$inject = [ '$scope', 'TMDBAPIService', '$routeParams' ];

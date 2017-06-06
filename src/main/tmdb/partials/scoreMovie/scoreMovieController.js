@@ -3,7 +3,7 @@ define( [ 'angular',
     function( angular, config ) {
         "use strict";
 
-        var ScoreController = function( $scope ) {
+        var scoreMovieController = function( $scope ) {
 
             $scope.view = {
                 color: 'gray'
@@ -31,8 +31,8 @@ define( [ 'angular',
             internal.assignColor($scope.val);
         };
 
-        ScoreController.$inject = [ '$scope' ];
+        scoreMovieController.$inject = [ '$scope' ];
 
-        return ScoreController;
+        return scoreMovieController;
     }
 );

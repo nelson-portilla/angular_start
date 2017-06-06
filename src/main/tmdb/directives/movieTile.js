@@ -11,7 +11,8 @@ define( [ 'angular',
                 templateUrl: '/tmdb/partials/movieTile/movieTile.html',
                 restrict: 'E',
                 scope: {
-                    movie: '=ngModel'
+                    movie: '=ngModel',
+                    even: '='
                 }
             };
         };
