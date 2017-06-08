@@ -1,0 +1,56 @@
+<div>
+<h3>
+<a href="#">Volver a Home</a>
+</h3> 
+</div>
+{{hola_nelson}}
+<div class='container'>
+	<h1> ng repeat </h1>
+    <div class="row">
+    	<div class="col-sm-1"> $index </div>
+    	<div class="col-sm-4"> name </div>
+    	<div class="col-sm-1"> $first </div>
+    	<div class="col-sm-1"> $even </div>
+    	<div class="col-sm-1"> $odd </div>
+    	<div class="col-sm-1"> $middle</div>
+    	<div class="col-sm-1"> $last </div>
+    </div>
+    <div class="row" ng-repeat="movie in view.movies.results | orderBy:'title':view.sort">
+    	<div class="col-sm-1"> {{ $index }} </div>
+    	<div class="col-sm-4"> {{ movie.title }} </div>
+    	<div class="col-sm-1"> {{ $first }} </div>
+    	<div class="col-sm-1"> {{ $even }} </div>
+    	<div class="col-sm-1"> {{ $odd }} </div>
+    	<div class="col-sm-1"> {{ $middle }} </div>
+    	<div class="col-sm-1"> {{ $last }} </div>
+    </div>
+    <button type="button"
+	    class="btn btn-primary"
+	    ng-click="sort()">
+	    <div>Sort</div>
+	</button>
+
+    <h1> ng show / ng if </h1>
+    <button type="button"
+	    class="btn btn-primary"
+	    ng-click="hide()">
+	    <div ng-if="view.showText">Hide</div>
+	    <div ng-if="!view.showText">Show</div>
+	</button>
+
+	<div ng-show="view.showText"> Some text to show or hide</div>
+
+	<h1> ng init </h1>
+	<button class="btn btn-secondary" ng-click="count = count + 1" ng-init="count = 0">
+		Init sample
+	</button>
+	<div>{{count}}</div>
+
+	<h1> ng bind </h1>
+
+	<div>{{view.sort}}</div>
+	<div ng-bind="view.sort"></div>
+
+	<input ng-model="view.dato.name"/>
+	<br/>
+</div>

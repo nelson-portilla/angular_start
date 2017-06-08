@@ -91,3 +91,15 @@ test('via: objectMode', function (t) {
 
   stream.end({})
 })
+
+test('via: readableObjectMode', function (t) {
+  var stream = via(
+    function (buf) {
+      t.strictEqual(buf.toString(), 'yeah')
+      return {}
+    },
+    { readableObjectMode: true }
+  )
+  stream.end('yeah')
+  t.end()
+})

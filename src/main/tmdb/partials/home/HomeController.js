@@ -18,23 +18,24 @@
 define( [ 'angular',
           'config/config',
           'tmdb/services/TMDBAPIService'],
+          
     function( angular, config, TMDBAPIService ) {
         "use strict";
 
         var HomeController = function($scope, TMDBAPIService ) {
-
+            
             $scope.view   = {
-                movies: [],
+                movies: []
             };
 
             $scope.hola_nelson = "Hello World  Nelson";
     
 
-        var api = TMDBAPIService.Discover();
-            api.discover.movies().then(function ( response ) {
-                $scope.view.movies = response.data;
-            });
-            
+            var api = TMDBAPIService.Discover();
+                api.discover.movies().then(function ( response ) {
+                    $scope.view.movies = response.data;
+                });
+
         };
 
         HomeController.$inject = [ '$scope', 'TMDBAPIService' ];

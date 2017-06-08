@@ -1,11 +1,12 @@
+<div>
+	<h3>
+		<a href="#hometwo" title="To home two">Ir a home two</a>
+	</h3>
+</div>
 {{hola_nelson}}
-<br>
-	<b>RESULTADO SERVICIO:</b>
-<br>
-<ol>
-	<li ng-repeat='x in view.movies.results'>
-		{{x.title}}<br>
-	<li>
-<ol>
-<br>
-<popular-movies ng-model="view.movies.results" />
+<h4 align="center">Lista Peliculas</h4>
+<div>
+	<div ng-repeat="movie in view.movies.results">
+		<movie-tile ng-model="movie" even="$even"/>
+	</div>
+</div>

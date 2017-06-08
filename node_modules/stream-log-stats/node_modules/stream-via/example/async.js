@@ -2,7 +2,7 @@ const via = require('../')
 const fs = require('fs')
 
 process.stdin
-  .pipe(via.async(function (chunk, enc, done){
+  .pipe(via.async(function (chunk, enc, done) {
     fs.readFile('LICENSE', function (err, content) {
       done(err, Buffer.concat([ chunk, content ]))
     })

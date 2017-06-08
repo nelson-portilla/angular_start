@@ -24,13 +24,8 @@ function streamLogStats (options) {
       resourceLine = requestSplit[1]
     }
 
-    var availableSpace = process.stdout.columns - 37
-    if (resourceLine.length > availableSpace) {
-      stats.addResource(logObject.status + ' ' + requestSplit[0] + ' ...' + resourceLine.substr(-(availableSpace)), logObject.bytes)
-    } else {
-      stats.addResource(logObject.status + ' ' + requestSplit[0] + ' ' + resourceLine, logObject.bytes)
-    }
-
+    stats.addResource(logObject.status + ' ' + requestSplit[0] + ' ' + resourceLine, logObject.bytes)
+    
     throttledRender(stats)
   }
 

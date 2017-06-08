@@ -1,5 +1,4 @@
 'use strict'
-var o = require('object-tools')
 var path = require('path')
 var urlUtil = require('url')
 var byteSize = require('byte-size')
@@ -48,14 +47,16 @@ stats.addResource = function (url, bytes) {
 
   stats.topResources = []
   stats.topTypes = []
-  o.each(stats.resource, function (resource, key) {
+  Object.keys(stats.resource).forEach(function (key) {
+    var resource = stats.resource[key]
     stats.topResources.push({
       resource: key,
       requests: resource.requests,
       bytes: byteSize(resource.bytes, { units: 'iec', precision: 2 })
     })
   })
-  o.each(stats.type, function (type, key) {
+  Object.keys(stats.type).forEach(function (key) {
+    var type = stats.type[key]
     stats.topTypes.push({
       type: key,
       requests: type.requests,
