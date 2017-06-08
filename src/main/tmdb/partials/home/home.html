@@ -7,6 +7,11 @@
 <h4 align="center">Lista Peliculas</h4>
 <div>
 	<div ng-repeat="movie in view.movies.results">
-		<movie-tile ng-model="movie" even="$even"/>
+		<div>	
+			<pre>
+				{{movie | json}}
+			</pre>
+		</div>
+			<movie-tile ng-model="movie" even="$even"/>
 	</div>
 </div>
