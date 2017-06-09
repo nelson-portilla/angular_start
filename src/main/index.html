@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -60,10 +61,25 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+<!-- RequireJS // -->
+<script src="/vendor/requirejs/require.js" data-main="main"></script>
 	</head>
 	<body>
-		
+	
+	<div class="wrapper">		
+		<div class="contain">
+			<!-- BEGIN PAGE CONTENT -->
+			<div class="content">
+
+				<div protected-content>
+
+					<ng-view></ng-view>
+				</div>
+			</div>
+			<!-- END PAGE CONTENT -->
+		</div>
+	</div>
+
 	<div id="fh5co-offcanvass">
 		<a href="#" class="fh5co-offcanvass-close js-fh5co-offcanvass-close">Menu <i class="icon-cross"></i> </a>
 		<h1 class="fh5co-logo"><a class="navbar-brand" href="index.html">Hydrogen</a></h1>
