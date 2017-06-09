@@ -1,5 +1,5 @@
 <div >
-	<!-- <a href="#/movie/{{ movie.id }}"
+	<a href="#/movie/{{ movie.id }}"
 		title="{{ movie.title }}"
 		ng-if="movie.poster_path">
 		<div>
@@ -7,14 +7,13 @@
 	        src="{{view.images}}{{ movie.poster_path }}"
 	        width="150" />
 	    </div>
-	</a> -->
+	</a>
 		
-	<div ng-if="movie.poster_path">
-		<!-- <div>{{movie.title}}</div> -->
+	<!-- <div ng-if="movie.poster_path">
 	    <img
 	        src="{{view.images}}{{ movie.poster_path }}"
 	        width="150" />
-	</div>
+	</div> -->
 	<movie-score prefix="score" val="movie.vote_average" action="clickOne()" ng-if="even"/>
 	<movie-score prefix="SCORE" val="movie.vote_average" action="clickTwo()" ng-if="!even"/>
 </div>

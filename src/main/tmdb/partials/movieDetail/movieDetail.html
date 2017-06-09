@@ -1,0 +1,29 @@
+<div class="continer">
+	<!-- <a ng-click="pesos_cop()">Mostrar Valor en COP</a> -->
+	<div class="row">
+		<div class="col-sm-12" align="center">
+			 <h1>{{view.details.title}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3">
+			<b>Presupuesto:</b>{{view.details.budget | currency:view.currency_symbol}}			
+		</div>
+		<div class="col-sm-3">
+			<button type="button" class="btn btn-primary">
+			    <div ng-click="pesos_cop()" ng-if="view.enus">Mostrar valor en COP</div>
+			    <div ng-click="pesos_us()" ng-if="!view.enus">Mostrar valor en US</div>
+			</button>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-sm-3">
+			<movie-tile ng-model="view.details" even="$even"></movie-tile>
+		</div>
+	</div>
+</div>
+
+<pre>
+	{{view.details | json}}
+</pre>
+
